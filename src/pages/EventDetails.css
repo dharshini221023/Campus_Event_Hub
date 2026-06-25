@@ -1,0 +1,229 @@
+.event-details__hero {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.event-details__hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-details__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(28, 28, 77, 0.35) 0%, rgba(22, 22, 41, 0.92) 100%);
+}
+
+.event-details__hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 36px;
+  color: #fff;
+}
+
+.event-details__back {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 18px;
+  transition: color var(--transition);
+}
+
+.event-details__back:hover {
+  color: #fff;
+}
+
+.event-details__category {
+  display: inline-block;
+  background: var(--gradient-accent);
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.event-details__hero-content h1 {
+  color: #fff;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  max-width: 760px;
+}
+
+.event-details__layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 32px;
+  padding: 50px 24px 90px;
+  align-items: start;
+}
+
+.event-details__main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.event-details__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.event-details__card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+}
+
+.event-details__card p {
+  font-size: 0.97rem;
+}
+
+.event-details__highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.event-details__highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.event-details__highlights svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-success);
+  margin-top: 1px;
+}
+
+.event-details__sidebar {
+  position: sticky;
+  top: 96px;
+}
+
+.event-details__info-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+}
+
+.event-details__info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.event-details__info-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.event-details__info-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.event-details__info-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.event-details__info-value {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.event-details__seats {
+  margin-bottom: 22px;
+}
+
+.event-details__seats-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.event-details__seats-fill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: 999px;
+  transition: width 600ms ease;
+}
+
+.event-details__seats p {
+  font-size: 0.85rem;
+}
+
+.event-details__seats strong {
+  color: var(--color-primary);
+}
+
+@media (max-width: 960px) {
+  .event-details__layout {
+    grid-template-columns: 1fr;
+  }
+  .event-details__sidebar {
+    position: static;
+  }
+}
+
+.event-details__registered-badge {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.15), rgba(16, 185, 129, 0.1));
+  border: 1.5px solid rgba(52, 211, 153, 0.5);
+  border-radius: 12px;
+  color: #059669;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.85rem;
+}
+
+.event-details__full-badge {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1.5px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.85rem;
+}
+
+.event-details__staff-note {
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 10px;
+  color: #7c3aed;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.75rem;
+}

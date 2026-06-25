@@ -1,0 +1,57 @@
+.not-found {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.not-found__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 60px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.not-found__ticket {
+  display: grid;
+  place-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 28px;
+  background: var(--gradient-accent);
+  border: 2px dashed rgba(255, 255, 255, 0.55);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 12px;
+  transform: rotate(-4deg);
+  animation: notFoundFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes notFoundFloat {
+  0%, 100% {
+    transform: rotate(-4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-10px);
+  }
+}
+
+.not-found h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.not-found .btn {
+  margin-top: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found__ticket {
+    animation: none;
+  }
+}
